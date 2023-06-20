@@ -18,15 +18,23 @@ let checkCount = 0;
 handleSlider();
 
 // Set circle strength to grey
+setIndicator("#ccc");
 
 // Set password length
 function handleSlider() {
   inputSlider.innerText = passwordLength;
   lengthDisplay.innerText = passwordLength;
+  const min = inputSlider.min;
+  const max = inputSlider.max;
+  console.log(min, max);
+  inputSlider.style.backgroundSize =
+    ((passwordLength - min) * 100) / (max - min) + "% 100%";
 }
 
 function setIndicator(color) {
   indicator.style.backgroundColor = color;
+  indicator.style.boxShadow = `0px 0px 12px 1px ${color}`;
+
   // shadow
 }
 
@@ -77,7 +85,7 @@ function calcStrength() {
 async function copyContent() {
   try {
     await navigator.clipboard.writeText(passwordDisplay.value);
-    copyMsg.innerText = "copied";
+    copyMsg.innerText = "Copied";
   } catch (e) {
     copyMsg.innerText = "Failed";
   }

@@ -5,75 +5,98 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="./assets/lock.png" type="image/x-icon" />
-    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
     <title>Password Generator</title>
   </head>
-  <body>
+  <body
+    class="w-screen h-screen flex flex-col justify-center items-center bg-gradient-to-br from-purple-900 via-purple-600 to-purple-900"
+  >
     <!-- Container Start -->
-    <div class="container">
-      <h1>Password Generator</h1>
+    <div class="container max-w-[450px]">
+      <h1
+        class="text-plwhite text-opacity-[0.75] uppercase tracking-wider text-center md:leading-snug leading-[3.5rem] text-3xl"
+      >
+        Password Generator
+      </h1>
 
       <!-- Display Container Start -->
-      <div class="display-container">
+      <div
+        class="display-container relative bg-dkviolet rounded-2xl border-b-4 border-ltviolet2 my-4 mx-0 pt-[0.35rem]"
+      >
         <input
           readonly
           placeholder="Password"
-          class="display"
+          class="display w-full bg-transparent py-[1.15rem] px-4 text-vbyellow font-semibold text-2xl tracking-[1px] pr-[3.25rem] border-none placeholder:-translate-y-2/4 placeholder:text-vbyellow placeholder:absolute placeholder:left-6 placeholder:top-[50%] placeholder:opacity-[0.65] placeholder:uppercase"
           data-passwordDisplay
         />
-        <button data-copy>
-          <span data-copyMsg></span>
+        <button data-copy class="absolute top-[50%] right-6 -translate-y-2/4">
+          <span
+            class="absolute bg-vbviolet text-vbyellow text-xl -top-[35px] -left-[25px] py-[5px] px-[10px] rounded-2xl opacity-0 scale-0 origin-bottom transition-all duration-[250] ease-in-out"
+            data-copyMsg
+          ></span>
           <img src="./assets/copy.svg" alt="copy" width="23" height="23" />
         </button>
       </div>
       <!-- Display Container End -->
 
       <!-- Input Container Start -->
-      <div class="input-container">
+      <div
+        class="input-container w-full p-8 bg-dkviolet rounded-2xl border-b-4 border-ltviolet2"
+      >
         <!-- Password length section -->
-        <div class="length-container">
-          <p>Password Length</p>
-          <p data-lengthNumber>0</p>
+        <div class="length-container flex items-center justify-between">
+          <p class="text-plwhite text-2xl">Password Length</p>
+          <p data-lengthNumber class="text-vbyellow text-2xl">0</p>
         </div>
         <!-- Slider -->
         <input
           type="range"
           min="1"
           max="20"
-          class="slider"
+          class="slider appearance-none w-full h-3 cursor-pointer bg-ltviolet rounded-2xl mt-8 mb-6 bg-gradient-to-b from-vbviolet to-vbviolet bg-no-repeat"
           step="1"
           data-lengthSlider
         />
 
         <!-- checkboxes-->
-        <div>
+        <div class="check">
           <input type="checkbox" id="uppercase" />
           <label for="uppercase">Includes Uppercase letters</label>
         </div>
 
-        <div>
+        <div class="check">
           <input type="checkbox" id="lowercase" />
           <label for="lowercase">Includes Lowercase letters</label>
         </div>
 
-        <div>
+        <div class="check">
           <input type="checkbox" id="numbers" />
           <label for="numbers">Includes Numbers </label>
         </div>
 
-        <div>
+        <div class="check">
           <input type="checkbox" id="symbols" />
           <label for="symbols">Includes Symbols </label>
         </div>
 
         <!-- strength section-->
-        <div class="strength-container">
-          <p>Strength</p>
-          <div data-indicator></div>
+        <div class="strength-container flex items-center justify-between">
+          <p class="text-plwhite text-2xl mt-7 mb-8">Strength</p>
+          <div data-indicator class="w-6 h-6 rounded-[50%]"></div>
         </div>
 
         <!-- generate password-->
-        <button class="generateButton">Generate Password</button>
+        <button
+          class="generateButton w-full py-4 px-0 bg-vbviolet text-center rounded-xl border-b-4 border-vbyellow uppercase tracking-[1px] text-vbyellow text-xl font-semibold"
+        >
+          Generate Password
+        </button>
       </div>
       <!-- Input Container End -->
     </div>
