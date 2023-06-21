@@ -60,17 +60,6 @@ This project was made possible thanks to the following resources:
 
 
 
-
-
-## Contact
-
-If you have any questions or feedback, please feel free to contact me via [email](mailto:zahidmohammad495@gmail.com) or [Twitter](https://twitter.com/z495m) I would be happy to hear from you!
-## Screenshots 
-Here's a GIF of the Razorpay UI clone:
-
-![App Screenshot](https://github.com/zahid-404/Razorpay-Clone/blob/main/demo.gif)
-
-
 ## Contributing
 
 If you would like to contribute to this project, please feel free to submit a pull request. We welcome all contributions, big or small!
