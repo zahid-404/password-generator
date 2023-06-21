@@ -78,6 +78,7 @@
   transform: scale(1);
 }
 
+/* to get designed thumb in mozilla properly */
 .slider::-moz-range-thumb {
   position: relative;
   z-index: 1;
